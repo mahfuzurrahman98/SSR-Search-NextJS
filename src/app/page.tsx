@@ -1,4 +1,4 @@
-// import Search from './components/Search';
+import Search from './components/Search';
 
 type searchParamsType = {
   q: string;
@@ -14,7 +14,7 @@ export default function Home({
     <div>
       <p>Hello</p>
       <p>Query: {q}</p>
-      {/* <Search searchText={q} /> */}
+      <Search searchText={q} />
     </div>
   );
 }

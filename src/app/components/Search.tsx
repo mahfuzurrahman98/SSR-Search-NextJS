@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 type Country = {
   id: string;
   name: string;
@@ -7,9 +9,21 @@ type Country = {
 };
 
 async function getCountries(searchText = '') {
-  const response = await fetch(`/api/search?q=${searchText}`);
-  const data = await response.json();
+  const response = await axios.get(
+    `http://localhost:3000/api/search?q=${searchText}`
+  );
+
+  const data = response.data as Country[];
   return data;
+  return [
+    {
+      id: '1',
+      name: searchText,
+      capital: 'test',
+      population: 100,
+      continent: 'test',
+    },
+  ];
 }
 
 export default async function Search({ searchText }: { searchText: string }) {
@@ -17,6 +31,7 @@ export default async function Search({ searchText }: { searchText: string }) {
 
   return (
     <div>
+      Hello here is {results[0].name}
       <form method="GET">
         <input type="text" name="q" placeholder="Enter search query" />
         <button type="submit">Search</button>
@@ -24,7 +39,6 @@ export default async function Search({ searchText }: { searchText: string }) {
       <p className="my-4">
         Query: <strong>{searchText}</strong>
       </p>
-
       <div className="container flex flex-wrap mx-auto">
         {results.map((country: any) => (
           <div
