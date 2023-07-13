@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Bangladesh",
+    "capital": "Dhaka",
+    "population": 180000000,
+    "continent": "Asia"
+  },
+  {
+    "id": 2,
+    "name": "Country 1",
+    "capital": "Capital 1",
+    "population": 1000000,
+    "continent": "Continent 1"
+  },
+  {
+    "id": 3,
+    "name": "Country 2",
+    "capital": "Capital 2",
+    "population": 2000000,
+    "continent": "Continent 2"
+  },
+  {
+    "id": 4,
+    "name": "India",
+    "capital": "New Delhi",
+    "population": 1400000000,
+    "continent": "Asia"
+  },
+  {
+    "id": 5,
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "population": 331000000,
+    "continent": "North America"
+  },
+  {
+    "id": 6,
+    "name": "Country 5",
+    "capital": "Capital 5",
+    "population": 5000000,
+    "continent": "Continent 5"
+  }
+]
